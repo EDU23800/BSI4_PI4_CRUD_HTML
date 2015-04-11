@@ -27,3 +27,18 @@ body{
 	border-style: none;
 	border-width: 60px;
 }
+.column{
+	text-decoration: none;
+	color: rgb(255,255,255);
+	text-align: center;
+}
+p.linkMenuCentral{
+	font-size: 20px;
+}
+a:hover{
+	text-decoration: none;
+}
+
+.btn-default{
+	width: 120px;
+}
