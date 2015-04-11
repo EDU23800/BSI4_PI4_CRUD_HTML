@@ -11,7 +11,7 @@
 *{
 	background: transparent;
 }
-html,.site,.container{
+.navegacao,.container{
 	background-image: url( ../img/fundo.jpg );
 	background-attachment: fixed;
 	background-repeat: none;
