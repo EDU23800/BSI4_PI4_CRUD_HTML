@@ -1,3 +1,4 @@
+
 div,nav{
 	background: transparent;
 }
@@ -75,9 +76,20 @@ div,nav{
 
 			border: none;
 		}
-		.apresentacao{
-			width: 100%;
-			background: #aaa;
-			height: 100%;
-			border-top: 1px solid #eee;
-		}
+
+.colBotao{
+	
+     color: #616165;
+
+     font-family: "Trebuchet MS";
+     font-size: 14px;
+
+     text-align: center;
+     text-decoration: none;
+     text-transform: uppercase;
+     text-shadow:1px 1px 0 #FFF;
+     padding: 5px 15px;
+
+    }
+}
+

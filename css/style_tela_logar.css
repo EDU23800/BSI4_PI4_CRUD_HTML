@@ -3,7 +3,7 @@ div,nav{
 }
 
 html,.site{
-background: #000;
+background: transparent;
 }
 
 .site {
@@ -71,14 +71,23 @@ background: #000;
 			border: none;
 		}
 
-		.text{
+		.text input{
 			width: 200px;
 			border: none;
 			margin-left: 10px;
+			color: #0000EE
 		}
 		.apresentacao{
 			width: 100%;
 			background: #aaa;
 			height: 100%;
 			border-top: 1px solid #eee;
+		}
+
+		.img-thumbnail{
+			position: relative;
+
+			height: 70%;
+			width: 70%;
+
 		}
