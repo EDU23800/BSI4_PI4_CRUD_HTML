@@ -56,6 +56,16 @@ a:hover{
 }
 
 .btn-default{
-	width: 125px;
-	background:#FFF;
+	width: 100px;
+	background:transparent;
+	border:none;
+}
+
+.foto_header{
+	margin-top: 2%;
+	width: 100%;
+}
+
+.btn-group-lg{
+	background: #000;
 }
