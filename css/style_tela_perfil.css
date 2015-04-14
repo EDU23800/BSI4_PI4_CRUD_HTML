@@ -1,3 +1,16 @@
-input{
-	background: #fff;
+body{
+	opacity: .80;
+}
+.esquerda{
+	text-align: left;
+
+}
+
+p,a{
+	color: #428bca;
+	font-weight: bold;
+	opacity: 100;
+}
+.teste{
+	background: #000;
 }
