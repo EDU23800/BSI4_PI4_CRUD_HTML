@@ -14,3 +14,35 @@ p,a{
 .teste{
 	background: #000;
 }
+
+.imgInteracao{
+	border-radius: 50%;
+	border-style: none;
+	border-width: 60px;
+}
+
+p.linkMenuCentral{
+	font-size: 20px;
+}
+a:hover{
+	text-decoration: none;
+}
+
+.btn-default{
+	width: 100px;
+	background:transparent;
+	border:none;
+}
+
+.foto_header{
+	margin-top: 2%;
+	width: 100%;
+}
+
+.btn-group-lg{
+	background: #000;
+}
+
+.minhaclasse{
+	background: #222;
+}
