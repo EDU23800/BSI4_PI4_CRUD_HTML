@@ -1,4 +1,3 @@
-
 div,nav{
 	background: transparent;
 }
@@ -21,7 +20,7 @@ div,nav{
 			.cabecalho h2{
 				font-size: 20px;
 			}
-		
+			
 		.btn-col{
 		    display: inline;
 
@@ -34,6 +33,11 @@ div,nav{
 		.apresentacao{
 			font-weight: bold;
 		}
+		.apresentacao {
+				font-weight: bold;
+				font-style:inherit;
+		}
+
 		input{
 			background: rgb(249,198,103); /* Old browsers */
 			/* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -65,5 +69,6 @@ div,nav{
      padding: 5px 15px;
 
     }
+.rodape{
+	margin-top: 30px;
 }
-
