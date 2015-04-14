@@ -50,4 +50,7 @@ body{
 	background: radial-gradient(ellipse at center,  #b5bdc8 0%,#28343b 63%,#28343b 74%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', endColorstr='#28343b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
-}	
+input{
+	background: #000;
+	color: #428bca;
+}
