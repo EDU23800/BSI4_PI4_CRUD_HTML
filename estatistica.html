@@ -1,76 +1,30 @@
 <html>
-<head>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="grafico.css"> 
-	</head>
-	<body>
-		<h1>Melhor rendimento de seu carro, baseado no posto abastecido</h1>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Km´s', 'Sales', 'Expenses'],
+          ['2013',  1000,      400],
+          ['2014',  1170,      460],
+          ['2015',  660,       1120],
+          ['2016',  1030,      540]
+        ]);
 
-		<div class="grafico">
-	<div class="container-colunas">
-		<div class="coluna">
-			<div class="fill"></div>
+        var options = {
+          title: 'Company Performance',
+          hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
 
-			<p class="rotulo">Posto A</p>
-		</div>
-		<div class="coluna">
-			<div class="fill"></div>
-
-			<p class="rotulo">Posto B</p>
-		</div>
-		<div class="coluna">
-			<div class="fill"></div>
-
-			<p class="rotulo">Posto C</p>
-		</div>
-		<div class="coluna">
-			<div class="fill"></div>
-
-			<p class="rotulo">Posto D</p>
-		</div>
-		<div class="coluna">
-			<div class="fill"></div>
-
-			<p class="rotulo">Posto E</p>
-		</div>
-	</div>
-</div>
-
-<style type="text/css">
-	.coluna:nth-child(1) .fill{
-		background: blue;
-		height: 1%;
-	}
-	.coluna:nth-child(2) .fill{
-		background: yellow;
-		height: 5%;
-	}
-	.coluna:nth-child(3) .fill{
-		background: green;
-		height: 6%;
-	}
-	.coluna:nth-child(4) .fill{
-		background: red;
-		height: 8%;
-	}
-	.coluna:nth-child(5) .fill{
-		background: gray;
-		height: 20%;
-	}
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	</body>
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+  </body>
 </html>
