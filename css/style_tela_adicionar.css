@@ -1,22 +1,104 @@
-*{
-    background color:transparent;
+
+
+body{
+    opacity: .80;
+}
+.esquerda{
+    text-align: left;
+
+}
+
+p,a{
+    color: #428bca;
+    font-weight: bold;
+    opacity: 100;
 }
 
 
 
-/*.site {
-    text-align:center;
-    float: none;
-    height:100%;
+
+.btn-group-lg{
+    background: #000;
+}
+
+p{
+    color: #428bca;
+}
+
+#titulo{
+    color: #428bca
+    
+}
+
+
+    }
+        #central{
+            width: 70%;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+        }
+
+body{
+    background-color: #FFFFFF;
+    background-color: background: #b5bdc8; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  #b5bdc8 0%, #28343b 63%, #28343b 74%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#b5bdc8), color-stop(63%,#28343b), color-stop(74%,#28343b)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  #b5bdc8 0%,#28343b 63%,#28343b 74%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  #b5bdc8 0%,#28343b 63%,#28343b 74%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  #b5bdc8 0%,#28343b 63%,#28343b 74%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  #b5bdc8 0%,#28343b 63%,#28343b 74%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', endColorstr='#28343b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.imgInteracao{
+    border-radius: 50%;
+    border-style: none;
+    border-width: 60px;
+}
+.column{
+    text-decoration: none;
+    color: rgb(255,255,255);
+    text-align: center;
+}
+p.linkMenuCentral{
+    font-size: 20px;
+}
+a:hover{
+    text-decoration: none;
+}
+
+.btn-default{
+    width: 100px;
+    background:transparent;
+    border:none;
+}
+
+.foto_header{
+    margin-top: 2%;
     width: 100%;
 }
-.estrutura{
-	width: 100%;
-	height: 100%;
+p.linkMenuCentral{
+    font-size: 20px;
 }
-.informativo{
-	display:inline-block;
-    float:none;
-    width: 70%;
-    height: 80%;
-}*/
+a:hover{
+    text-decoration: none;
+}
+
+.btn-default{
+    width: 100px;
+    background:transparent;
+    border:none;
+}
+
+.foto_header{
+    width: 100%;
+}
+
+.btn-group-lg{
+    background: #000;
+}
+
+.minhaclasse{
+    background: #222;
+}

@@ -1,81 +1,101 @@
-<!DOCTYPE html> 
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>KraftStoff</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="Ivan Probst" content="">
-  	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/style_tela_adicionar.css" rel="stylesheet">
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>KraftStoff</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="" content="">
 
-  <!-- Fav and touch icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
-  <link rel="shortcut icon" href="img/favicon.png">
-  
-</head>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/style_tela_perfil.css" rel="stylesheet">
 
+	</head>
 	<body>
-		<div class="container">
-			<div class="row clearfix">
-				<div class="col-md-4 column"></div>
-				<div class="col-md-6 column">
-					<div id="foto_header">
+		<div class="site">
+			<div class="estrutura">
+				<div class="navegacao">
+					<div class="col-md-12">
+						<img width= "60%" src="img\logo.png" class="img">
+						</img>
+					</div>
+					<div class="col-md-12 esquerda">
+						<div class="col-md-2 esquerda">
+						</div>
+						<div class="col-md-10 esquerda">
+							<h1>Faça seu abastecimento</h1>
+							<br/>
 
-					<img width= "30%" height="50%" src="img\logo.jpg" class="img-thumbnail"> </div>
+							<h2>Dados do combustível</h2>
+						</div>
+					</div>
+					<div class="col-md-12 esquerda">
+						<div class="col-md-12">
+							<table>
+								<tl>
+									<tr>
+										<td><p>Tipo: <input type="text" name="fname" size="30"> </input></p></td>
+										<td><p>Quantidade de Litros: <input type="text" name="fname" size="30"> </input></p></td>
+										<td><p>Preço por Litro: <input type="text" name="fname" size="35"> </input></p></td>
+									</tr>
+							</table>
+	   					</div>
+					</div>
 
-					<p>Faça o abastecimento</p>
+					<div class="col-md-12 esquerda">
+						<div class="col-md-2 esquerda">
+						</div>
+						<div class="col-md-10 esquerda">
+							<h1>Dados do Posto</h1>
+							<br/>
+						</div>
+					</div>
+					<div class="col-md-12 esquerda">
+						<div class="col-md-12">
+							<table>
+								<tl>
+									<tr>
+										<td><p>Bandeira: <input type="text" name="fname" size="30"> </input></p></td>
+										<td><p>Apelido:<br/> <input type="text" name="fname" size="30"> </input></p></td>
+										<td><p>Número da Bomba:<br/> <input type="text" name="fname" size="30"> </input></p></td>
+									</tr>
+							</table>
+	   					</div>
+	   				<div class="col-md-10 esquerda">
+						<h1>Dados do Veículo</h1>
+						<br/></div></div>
+					<div class="col-md-12 esquerda">
+						<div class="col-md-12">
+							<table>
+								<tl>
+									<tr>
+										<td><p>Kilometragem: <input type="text" name="fname" size="30"> </input></p></td>
+									</tr>
+								</table>
+	   						</div>
+						</div>
+
+						<input type="button" name="Salvar" value="Salvar">
+
 					<br>
+					
 
-					<p id="DadosCombustivel">Dados do combustível</p>
+				<div class="btn-group-lg">
+						<button class="btn btn-default" type="button"><a href="index.html"><img width= "40px" height="40px" alt="140x140" src="img\home.jpg" class="img-circle menuRodape"></em> <br>Menu</button> 
+						
+						<button class="btn btn-default" type="button"><a href="Perfil.html"><img width= "40px" height="40px" alt="140x140" src="img\perfil.png" class="img-circle menuRodape"> <br>Perfil</button>
 
-					<p>Tipo</p>
-					<input type="text" name="fname">
+						<button class="btn btn-default" type="button"><a href="adicionar.html"><img width= "40px" height="40px" alt="140x140" src="img\bombaGasolina.png" class="img-circle menuRodape"><br> Novo</button> 
 
-					<p>Quantidade de litros</p>
-					<input type="text" name="fname">
-
-					<p>Preço por litro</p>
-					<input type="text" name="fname">
-					<br><br><br><br>
-
-
-					<p id="DadosVeiculo">Dados do veiculo</p>
-
-					<p>Kilometragem</p>
-					<input type="text" name="fname">
-					<br><br><br><br><br>
-
-					<p id="DadosPosto">Dados do Posto</p>
-
-					<p>Bandeira</p>
-					<input type="text" name="fname">
-
-					<p>* Apelido</p>
-					<input type="text" name="fname">
-
-					<br>
-					<br>
-
-					<input type="button" name="Salvar" value="Salvar">
-
-					<br>
-					<br>
-
-				<div class=" btn-group-lg">
-				 <button class="btn btn-default" type="button"><a href="index.html" target="parent"><img width= "40px" height="40px" alt="140x140" src="img\home.jpg" class="img-circle"></em> <br> HOME</button> 
-
-				 <button class="btn btn-default" type="button"><a href="quintaTela.html"><img width= "40px" height="40px" alt="140x140" src="img\perfil.png" class="img-circle"> <br>PERFIL</button>
-
-				 <button class="btn btn-default" type="button"><a href="quartaTela.html"><img width= "40px" height="40px" alt="140x140" src="img\bombaGasolina.png" class="img-circle"><br> ADICIONAR</button> 
-				 
-				 <button class="btn btn-default" type="button"><a href="terceiraTela.html" target="parent"><img width= "40px" height="40px" alt="140x140" src="img\news.png" class="img-circle"> <br>HISTÓRICO</button>
+						<button class="btn btn-default" type="button"><a href="historico.html"><img width= "40px" height="40px" alt="140x140" src="img\news.png" class="img-circle menuRodape"> <br>Histórico</button>	 
+						
+						<button class="btn btn-default" type="button"><a href="logar.html"><img width= "40px" height="40px" alt="140x140" src="img\logout.png" class="img-circle menuRodape"></em> <br>Logout</button> 
 		 
 		  		</div>
 			</div>
 		</div>
+		</div>
 	</body>
+
 </html>
+
