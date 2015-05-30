@@ -1,3 +1,5 @@
+var mybd = AbrirDB();
+
 // Método de click //
 function clica2(){ 
 	//myTransactionSQL("DROP TABLE TS_USUARIO");
@@ -125,6 +127,3 @@ function onError( error ){
 function onSuccess(resolve){
 
 }
-//outputPerfil();
-
-// xampp ->htdocs
