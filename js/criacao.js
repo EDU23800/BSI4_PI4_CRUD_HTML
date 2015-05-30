@@ -1,7 +1,7 @@
 //criação das tabelas
 
 db.transaction(function(transaction){
-	transaction.executeSql("CREATE TABLE IF NOT EXISTS tb_usuario (" +"id_usuario INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
+	transaction.executeSql("CREATE TABLE IF NOT EXISTS ts_usuario (" +"id_usuario INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
 	"ds_nome TEXT NOT NULL, ds_sobrenome TEXT NOT NULL "+"ds_email TEXT NOT NULL"+"
 	ds_senha TEXT NOT NULL"+" ds_telefone INTEGER NOT NULL"+" ds_celular INTEGER NOT NULL"+" dt_nascimento DATE NOT NULL);"); 
 

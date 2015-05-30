@@ -1,9 +1,60 @@
-var mybd = AbrirDB();
+var mydb = AbrirDB();
+
+function addPerfil() {
+
+	myTransactionSQL("CREATE TABLE IF NOT EXISTS ts_usuario (id_usuario  INTEGER PRIMARY KEY ASC,"+
+		"ds_nome CHAR(20),"+
+		"ds_sobrenome CHAR (50)," +
+		"ds_email CHAR(20)," +
+		"ds_senha CHAR(20), " +
+		"ds_telefone INTEGER, " +
+		"ds_celular INTEGER, " +
+		"dt_nascimento DATETIME)");    
+
+	if (mydb) {
+        //pegar os valores digitados pelo usuário
+        var nome = document.getElementById("fname").value;
+        var sobrenome = document.getElementById("lname").value;
+        var email = document.getElementById("email").value;
+
+        //Test to ensure that the user has entered both a make and model
+        if (nome !== "" && sobrenome !== "" && email !== "") {
+            //Insert the user entered details into the cars table, note the use of the ? placeholder, these will replaced by the data passed in as an array as the second parameter
+	            mydb.transaction(function (t) {
+	                //t.executeSql("INSERT INTO TS_USUARIO (nome, sobrenome, email) VALUES (?, ?, ?)", [nome, sobrenome, email],
+	                t.executeSql("INSERT INTO TS_USUARIO (DS_NOME, DS_SOBRENOME, DS_EMAIL) VALUES (?,?,?)", [nome, sobrenome,email],
+	                function(){}, 
+                    function(){
+                        console.log("Erro no insert no banco");
+                    });
+	            });
+
+        
+            SelectDB("SELECT * FROM TS_USUARIO ", mydb);
+
+        } else {
+            alert("Campos de preenchimento obrigatório.");
+        }
+    } else {
+        alert("db not found, your browser does not support web sql!");
+    }
+}
+
+function clica2(){
+	myTransactionSQL("DROP TABLE IF EXISTS TS_USUARIO");
+}
+
+
+
+
+
+
+
 
 // Método de click //
-function clica2(){ 
-	//myTransactionSQL("DROP TABLE TS_USUARIO");
-	myTransactionSQL( 'CREATE TABLE IF NOT EXISTS TS_USUARIO( ID_USUARIO INT AUTO_INCREMENT, DS_USUARIO CHAR(20))');
+//function clica2(){ 
+//	//myTransactionSQL("DROP TABLE TS_USUARIO");
+//	myTransactionSQL( 'CREATE TABLE IF NOT EXISTS TS_USUARIO( ID_USUARIO INT AUTO_INCREMENT, DS_USUARIO CHAR(20))');
 
 	//myTransactionSQL("delete from TS_USUARIO");
 	//myTransactionSQL( 'INSERT INTO TS_USUARIO (ID_USUARIO,DS_USUARIO) VALUES (2,"Ivan")');
@@ -11,7 +62,7 @@ function clica2(){
 	//$query4=mysql_query("select * from TS_USUARIO");
 	//$result4=mysql_query($query4);
 	//console.log(myObject);
-}
+//}
 
 // Abre o banco de dados com suas denifições padrões
 // Parametro:
@@ -72,58 +123,3 @@ function clica2(){
 //	}
 //	return( results );
 //}
-
-//------------------------------------function ivan---------------------------------------------------
-
-
-//var mydb = openDatabase("perfils_db", "0.1", "A Database of perfil", 1024 * 1024);
-
-//create the perfil table 
-//mydb.transaction(function (t) {
-//t.executeSql("CREATE TABLE IF NOT EXISTS perfil (id_perfil INTEGER PRIMARY KEY ASC, nome TEXT, sobrenome TEXT)");
-//});
-
-
-
-function addPerfil() {
-    //check to ensure the mydb object has been created
-
-    var mydb = AbrirDB();
-	myTransactionSQL( 'CREATE TABLE IF NOT EXISTS TS_USUARIO( ID_USUARIO INT, DS_USUARIO CHAR(20))', mydb);
-    if (mydb) {
-        //pegar os valores digitados pelo usuário
-        var nome = document.getElementById("fname").value;
-        var sobrenome = document.getElementById("lname").value;
-        var email = document.getElementById("email").value;
-
-        //Test to ensure that the user has entered both a make and model
-        if (nome !== "" && sobrenome !== "" && email !== "") {
-            //Insert the user entered details into the cars table, note the use of the ? placeholder, these will replaced by the data passed in as an array as the second parameter
-	            mydb.transaction(function (t) {
-	                //t.executeSql("INSERT INTO TS_USUARIO (nome, sobrenome, email) VALUES (?, ?, ?)", [nome, sobrenome, email],
-	                t.executeSql("INSERT INTO TS_USUARIO (ID_USUARIO) VALUES (?)", [nome],
-	                function(){}, 
-                    function(){
-                        console.log("erro na query");
-                    });
-	            });
-
-        
-            SelectDB("SELECT ID_USUARIO FROM TS_USUARIO ", mydb);
-
-        } else {
-            alert("Campos de preenchimento obrigatório.");
-        }
-    } else {
-        alert("db not found, your browser does not support web sql!");
-    }
-}
-
-function onError( error ){
-
-	console.log(error.message);
-}
-
-function onSuccess(resolve){
-
-}
