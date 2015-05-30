@@ -1,3 +1,5 @@
+var resultado = [];
+
 function clica(){
 	//	db = AbrirDB();
 		var oDB = AbrirDB();
@@ -10,6 +12,7 @@ function clica(){
 			}
 		});
 	});
+
 }
 
 function clica_Old() {
@@ -19,18 +22,31 @@ function clica_Old() {
 // Função responsável pela realização de consultas a base de dados
 // Parametros: Recebe a query para consuta
 // Retorno: Retorna um array como resultado ou Null quando não tiver informação //
-function SelectDB( cQuery ){
+function SelectDB( cQuery, oDB ){
 
-	var oDB = AbrirDB();
+	if (oDB == null || oDB == undefined) {
+        
+        oDB = AbrirDB();
+    }
+
 	oDB.transaction( function(tx) {
-		tx.executeSql(cQuery);
-		tx.executeSql('SELECT * FROM table1', [], function (tx, results) {
-		  var len = results.rows.length, i;
-		  for (i = 0; i < len; i++) {
-		    alert(results.rows.item(i).text);
-		  }
-		});
-    });	    
+		tx.executeSql(
+			cQuery, 
+			[],
+			function (tx, results) {
+			  var len = results.rows.length, i;
+			  resultado = results;
+			  for (i = 0; i < len; i++) {
+			    console.log( i + ": " + results.rows.item(i).ID_USUARIO);
+		  	  }
+		  	},
+		  function(){
+		  	console.log( "problemas na select " + err.mesage);
+		  });
+	});
+
+	console.log( resultado.length);
+
 }
 
 // Função responsável pela abertura da database 
@@ -41,7 +57,30 @@ function AbrirDB(){
 	return( db );
 }
 
+// Executa o comando no banco( insert, create, etc)
+// Parametro:
+//			query: Syntax da query a ser realizada
+//			db: objeto data base ( não obrigatório )
+// Retorno: Default //
+function myTransactionSQL( query, db ){
+	 
+	if (db == null || db == undefined) {
+        
+        db = AbrirDB();
+    }
 
+	 db.transaction(
+        function (tx) {
+            tx.executeSql( query);
+        },
+        function (error) {
+
+            console.log("Erro na comunicação com o banco de dados: " + error.message + "\n	Syntax: " + query);
+        },
+        function () {}
+    );
+
+}
 
 
 /*oTransaction.executeSql(
