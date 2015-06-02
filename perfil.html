@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<title>KraftStoff</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="">
-		<meta name="" content="">
+	 	<meta charset="utf-8">
+	 	<title>KraftStoff</title>
+	 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 	<meta name="description" content="">
+
+	 	<script language="JavaScript" src="js/raiz.js"></script>
+		<script language="JavaScript" src="js/index.js"></script>
+
 
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-		
-		<script language="JavaScript" src="js/raiz.js"></script>
-		<script language="JavaScript" src="js/perfil.js"></script>
-
-
+		<link href="css/style_tela_index.css" rel="stylesheet">
+		<link rel="shortcut icon" href="img/favicon.png">
 	</head>
+
 	<body>
 		<div class="site">
 			<div class="estrutura">
-				<div class="navegacao">
-					<div class="col-md-12">
-						<img width= "60%" src="img\logo.png" class="img">
-						</img>
+				<nav class="navegacao">
+					<div class="foto_header">
+						<img width= "60%" src="img\logo.png" class="img"></img>
 					</div>
+					<br/>
+					<!-- ///////////////////////////////////////////////// -->
+
 					<div class="col-md-12 esquerda">
-						<div class="col-md-2 esquerda">
-						</div>
+						<div class="col-md-2 esquerda"></div>
 						<div class="col-md-10 esquerda">
-							<h1>Perfil do Fulano</h1>
+							<h1>Dados pessoais</h1>
 							<br/>
 						</div>
 					</div>
 					<div class="col-md-12 esquerda">
-						<form id="dadosPessoais">
 							<div class="col-md-12">
 								<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table-pricing">
 									<tl>
@@ -53,12 +54,9 @@
 									</tl>
 								</table>
 		   					</div>
-		   				</form>
 					</div>
-
 					<div class="col-md-12 esquerda">
-						<div class="col-md-2 esquerda">
-						</div>
+						<div class="col-md-2 esquerda"></div>
 						<div class="col-md-10 esquerda">
 							<h1>Dados do Veículo</h1>
 							<br/>
@@ -67,11 +65,9 @@
 					<div class="col-md-12 esquerda">
 						<form id="dadosVeiculo">
 							<div class="col-md-12">
-
 								<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table-responsive">
 									<tl>
 										<tr>
-
 											<td><p>Marca: <input type="text" id="marca" name="fname" size="30"> </input></p></td>
 											<td><p>Ano Fab.:<br/> <input type="text" id="anofabricacao" name="fname" size="30"> </input></p></td>
 											<td><p>Ano Modelo:<br/> <input type="text" id="anomodelo"name="fname" size="35"> </input></p></td>
@@ -84,11 +80,13 @@
 									</tl>
 								</table>
 		   					</div>
-		   				</form>
 					</div>
 					<div class="col-md-12">
 						<input type="submit" value="Salvar"  onclick="salvarPerfil()"></input>
 					</div>
+					<br/>
+					
+					<!-- ///////////////////////////////////////////////// -->
 					<div class="btn-group-lg">
 						<button class="btn btn-default" type="button"><a href="index.html"><img width= "40px" height="40px" alt="140x140" src="img\home.jpg" class="img-circle menuRodape"></em> <br>Menu</button> 
 						
@@ -100,7 +98,7 @@
 						
 						<button class="btn btn-default" type="button"><a href="logar.html"><img width= "40px" height="40px" alt="140x140" src="img\logout.png" class="img-circle menuRodape"></em> <br>Logout</button> 
 					</div>
-			  	</div>
+				</nav>
 			</div>
 		</div>
 	</body>

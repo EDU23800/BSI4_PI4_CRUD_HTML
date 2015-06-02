@@ -1,18 +1,16 @@
 body{
 	opacity: .80;
 }
-.esquerda{
-	text-align: left;
-
-}
 
 p,a{
 	color: #428bca;
 	font-weight: bold;
 	opacity: 100;
 }
-.teste{
-	background: #000;
+
+.esquerda{
+	text-align: left;
+
 }
 
 .imgInteracao{
@@ -24,6 +22,7 @@ p,a{
 p.linkMenuCentral{
 	font-size: 20px;
 }
+
 a:hover{
 	text-decoration: none;
 }
@@ -40,8 +39,4 @@ a:hover{
 
 .btn-group-lg{
 	background: #000;
-}
-
-.minhaclasse{
-	background: #222;
 }
