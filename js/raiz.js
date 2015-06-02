@@ -137,13 +137,25 @@ function CreateTable_Veiculo(){
         "NR_POTENCIA DECIMAL( 5, 2 ), " +
         "DS_COR CHAR (30),"+
         "ID_USUARIO INTEGER,"+
-        "CONSTRAINT TB_USUARIO FOREIGN KEY(ID_USUARIO) REFERENCES ID_USUARIO )");
+        "CONSTRAINT TS_USUARIO FOREIGN KEY(ID_USUARIO) REFERENCES ID_USUARIO )");
 }
 
+// Estrutura da tabela de abastecimento
+function CreateTable_Abastecimento(){
+    myTransactionSQL("CREATE TABLE IF NOT EXISTS ts_abastecimento (ID_ABASTECIMENTO INTEGER PRIMARY KEY ASC,"+
+        "VL_PORLITRO DECIMAL( 5, 3 ),"+
+        "QT_LITRO DECIMAL( 5,3 )," +
+        "DT_QUILOMETRAGEM DATETIME," +
+        "DS_BANDEIRAPOSTO CHAR(30), " +
+        "DS_APELIDOPOSTO CHAR(50), " +
+        "DS_NUMEROBOMBA CHAR(10),"+
+        "CONSTRAINT TS_USUARIO FOREIGN KEY(ID_USUARIO) REFERENCES ID_USUARIO )");
+}
+
+// Recebe os dados de um elemento
 function getValueElement( campo, tipo ){
 
     var value = document.getElementById(campo).value;
-
     return tratarTipoRetorno(value, tipo);   
 
 }

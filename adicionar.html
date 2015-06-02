@@ -10,6 +10,9 @@
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/style_tela_perfil.css" rel="stylesheet">
 
+		<script language="JavaScript" src="js/raiz.js"></script>
+		<script language="JavaScript" src="js/adicionar.js"></script>
+
 	</head>
 	<body>
 		<div class="site">
@@ -34,7 +37,13 @@
 							<table>
 								<tl>
 									<tr>
-										<td><p>Tipo: <input type="text" id="tipocombustivel" name="fname" size="30"> </input></p></td>
+										<td><p>Tipo:
+											<select id="tipocombustivel" name="tipo">
+												<option value="1"selected>Gasolina</option> 
+												<option value="2">Etanol</option>
+												<option value="3">Diesel</option>
+											</select>
+											<!--<input type="text" id="tipocombustivel" name="fname" size="30"> </input></p></td>-->
 										<td><p>Quantidade de Litros: <input type="text" id="qt_litro" name="fname" size="30"> </input></p></td>
 										<td><p>Preço por Litro: <input type="text" id="vl_porlitro" name="fname" size="35"> </input></p></td>
 									</tr>
@@ -75,7 +84,7 @@
 	   						</div>
 						</div>
 
-						<input type="button" onClick="addAbastecimento()" name="Salvar" value="Salvar">
+						<input type="button" onClick="addAbastecimento();" name="Salvar" value="Salvar">
 
 					<br>
 					

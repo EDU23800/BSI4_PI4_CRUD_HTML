@@ -1,11 +1,10 @@
 var mydb = AbrirDB();
 var resultado = [];
-var ID_USUARIO = getParameterByName("usuario");
+var ID_USUARIO = tratarTipoRetorno( getParameterByName("usuario"), "N" );
 
-if( ID_USUARIO > 0 )
-    window.onload = carregarUsuarios(resultado, ID_USUARIO , CarregarDadosPerfil);
+window.onload = carregarUsuarios(resultado, ID_USUARIO , CarregarDadosPerfil);
 
-function salvarPerfil() {
+function perfilSalvar() {
 
 	CreateTable_Veiculo();
 
@@ -21,35 +20,36 @@ function salvarPerfil() {
     var confirma_senha = getValueElement("confirma_senha", "C");
 
 
-    if ( nome == "" )
-    {
-    	warning("Nome do perfil não preenchido");
-    	return;
-    }
+ //    if ( nome == "" )
+ //    {
+ //    	warning("Nome do perfil não preenchido");
+ //    	return;
+ //    }
 
-    else if (sobrenome == "")
-    {
-    	warning("Sobrenomenome do perfil não preenchido");
-    	return;
-	}
+ //    else if (sobrenome == "")
+ //    {
+ //    	warning("Sobrenomenome do perfil não preenchido");
+ //    	return;
+	// }
 
-    else if (email == "")
-    {
-    	warning("E-mail é de preenchiento automárica.");
-    	return;
-	}else if (login == "")
-    {
-    	warning("Preencha um usuário válido.");
-    	return;
-	}else if (senha == "")
-    {
-    	warning("Senha não informada.");
-    	return;
-	}else if (confirma_senha == "")
-    {
-    	warning("Preencha um usuário válido.");
-    	return;
-	}
+ //    else if (email == "")
+ //    {
+ //    	warning("E-mail é de preenchiento automárica.");
+ //    	return;
+	// }else if (login == "")
+ //    {
+ //    	warning("Preencha um usuário válido.");
+ //    	return;
+	// }else if (senha == "")
+ //    {
+ //    	warning("Senha não informada.");
+ //    	return;
+
+	// }else if (confirma_senha == "")
+ //    {
+ //    	warning("Preencha um usuário válido.");
+ //    	return;
+	// }
 
 
 	//pegar os valores digitados pelo usuário
@@ -111,7 +111,10 @@ function CarregarDadosPerfil( itemUsuario ){
 function abrirTelaInicial(){
 
     var cQuery = "SELECT ID_USUARIO FROM TS_USUARIO ORDER BY ID_USUARIO DESC LIMIT 1"; 
-    func = function( itemUsuario ){ window.open( "index.html?usuario=" + itemUsuario.ID_USUARIO,"_self" );};
+    func = function( itemUsuario ){
+         window.open( "index.html?usuario=" + itemUsuario.ID_USUARIO, "_self" );
+         // window.location.href("index.html");
+    };
     
     mydb.transaction( function(tx) {
 
@@ -119,17 +122,20 @@ function abrirTelaInicial(){
             cQuery, 
             [],
             function (tx, results) {
-              var len = results.rows.length, i;
-
-              for (i = 0; i < len; i++) {
+                var len = results.rows.length, i;
                 item= results.rows.item(i);
-
-                    func(item);
-              }
+                alert( item.ID_USUARIO);
+                func(item);
             },
           function(){
             console.log( "Erro de sintax ao carregar os usuário.");
           });
     });
     
+}
+
+function teste(){
+
+    window.open( "index.html?","_self" );   
+
 }
