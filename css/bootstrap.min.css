@@ -55,3 +55,7 @@ input{
 	background: #000;
 	color: #428bca;
 }
+
+p{
+	font-weight: bold;
+}

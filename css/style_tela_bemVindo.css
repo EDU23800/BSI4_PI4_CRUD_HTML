@@ -14,13 +14,13 @@ div,nav{
 		}
 
 			.cabecalho h1{
-				font-size: 40px;
+				font-size: 50px;
 			}
 
 			.cabecalho h2{
 				font-size: 20px;
 			}
-			
+
 		.btn-col{
 		    display: inline;
 
@@ -37,6 +37,9 @@ div,nav{
 				font-weight: bold;
 				font-style:inherit;
 		}
+		.p1{
+			font-size: 20px;
+		}
 
 .colBotao{
 	
@@ -52,6 +55,7 @@ div,nav{
      padding: 5px 15px;
 
     }
+
 .rodape{
 	margin-top: 30px;
 }
