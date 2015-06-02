@@ -124,7 +124,6 @@ function abrirTelaInicial(){
             function (tx, results) {
                 var len = results.rows.length, i;
                 item= results.rows.item(i);
-                alert( item.ID_USUARIO);
                 func(item);
             },
           function(){
