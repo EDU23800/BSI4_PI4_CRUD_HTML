@@ -142,13 +142,15 @@ function CreateTable_Veiculo(){
 
 // Estrutura da tabela de abastecimento
 function CreateTable_Abastecimento(){
-    myTransactionSQL("CREATE TABLE IF NOT EXISTS ts_abastecimento (ID_ABASTECIMENTO INTEGER PRIMARY KEY ASC,"+
+    myTransactionSQL("CREATE TABLE IF NOT EXISTS TB_ABASTECIMENTO (ID_ABASTECIMENTO INTEGER PRIMARY KEY ASC,"+
         "VL_PORLITRO DECIMAL( 5, 3 ),"+
         "QT_LITRO DECIMAL( 5,3 )," +
-        "DT_QUILOMETRAGEM DATETIME," +
+        "DT_ABASTECIMENTO DATETIME," +
         "DS_BANDEIRAPOSTO CHAR(30), " +
         "DS_APELIDOPOSTO CHAR(50), " +
         "DS_NUMEROBOMBA CHAR(10),"+
+        "QT_KMATUAL DECIMAL(5,2),"+
+        "ID_USUARIO INTEGER,"+
         "CONSTRAINT TS_USUARIO FOREIGN KEY(ID_USUARIO) REFERENCES ID_USUARIO )");
 }
 
