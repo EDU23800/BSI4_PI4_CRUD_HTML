@@ -192,3 +192,31 @@ function Esperar( miliseconds ){
     while(new Date().getTime() < now + miliseconds ){   }
 
 }
+
+
+//funções que são adicionadas aos botões de todas as telas, para concatenar com os user´s id
+var ID_USUARIO = getParameterByName("usuario");
+
+function abrirPerfil(){
+
+    window.open( "perfil.html?usuario=" + getParameterByName,"_self" );
+
+}
+
+function abrirAdicionar(){
+
+    window.open( "adicionar.html?usuario=" + getParameterByName,"_self" );
+
+}
+
+function abrirHistorico(){
+
+    window.open( "historico.html?usuario=" + getParameterByName,"_self" );
+
+}
+
+function abrirIndex(){
+    
+    window.open( "index.html?usuario=" + getParameterByName,"_self" );
+
+}

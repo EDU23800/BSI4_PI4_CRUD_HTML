@@ -49,7 +49,7 @@ function carregarAbastecimentos( restultado, ID_ABASTECIMENTO, callback ){
 function CarregarDadosHistorico( itemAbastecimento ){
 
 	// Dados pessoais
-	document.getElementById("vl-_por_litro").value = tratarTipoRetorno(itemAbastecimento.vl-_por_litro,"N" );
+	document.getElementById("vl-_por_litro").value = tratarTipoRetorno(itemAbastecimento.vl_por_litro,"N" );
 	document.getElementById("qt_litro").value = tratarTipoRetorno(itemAbastecimento.qt_litro,"N" );
 	document.getElementById("qt_quilometragem").value = tratarTipoRetorno(itemAbastecimento.qt_quilometragem,"N" );
 	document.getElementById("ds_bandeiraposto").value = tratarTipoRetorno(itemAbastecimento.ds_bandeiraposto,"C" );
