@@ -20,36 +20,36 @@ function perfilSalvar() {
     var confirma_senha = getValueElement("confirma_senha", "C");
 
 
- //    if ( nome == "" )
- //    {
- //    	warning("Nome do perfil não preenchido");
- //    	return;
- //    }
+    if ( nome == "" )
+    {
+    	warning("Nome do perfil não preenchido");
+    	return;
+    }
 
- //    else if (sobrenome == "")
- //    {
- //    	warning("Sobrenomenome do perfil não preenchido");
- //    	return;
-	// }
+    else if (sobrenome == "")
+    {
+    	warning("Sobrenomenome do perfil não preenchido");
+    	return;
+	}
 
- //    else if (email == "")
- //    {
- //    	warning("E-mail é de preenchiento automárica.");
- //    	return;
-	// }else if (login == "")
- //    {
- //    	warning("Preencha um usuário válido.");
- //    	return;
-	// }else if (senha == "")
- //    {
- //    	warning("Senha não informada.");
- //    	return;
+    else if (email == "")
+    {
+    	warning("E-mail é de preenchiento automárica.");
+    	return;
+	}else if (login == "")
+    {
+    	warning("Preencha um usuário válido.");
+    	return;
+	}else if (senha == "")
+    {
+    	warning("Senha não informada.");
+    	return;
 
-	// }else if (confirma_senha == "")
- //    {
- //    	warning("Preencha um usuário válido.");
- //    	return;
-	// }
+	}else if (confirma_senha == "")
+    {
+    	warning("Preencha um usuário válido.");
+    	return;
+	}
 
 
 	//pegar os valores digitados pelo usuário
