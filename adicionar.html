@@ -34,9 +34,9 @@
 							<table>
 								<tl>
 									<tr>
-										<td><p>Tipo: <input type="text" name="fname" size="30"> </input></p></td>
-										<td><p>Quantidade de Litros: <input type="text" name="fname" size="30"> </input></p></td>
-										<td><p>Preço por Litro: <input type="text" name="fname" size="35"> </input></p></td>
+										<td><p>Tipo: <input type="text" id="tipocombustivel" name="fname" size="30"> </input></p></td>
+										<td><p>Quantidade de Litros: <input type="text" id="qt_litro" name="fname" size="30"> </input></p></td>
+										<td><p>Preço por Litro: <input type="text" id="vl_porlitro" name="fname" size="35"> </input></p></td>
 									</tr>
 							</table>
 	   					</div>
@@ -55,9 +55,9 @@
 							<table>
 								<tl>
 									<tr>
-										<td><p>Bandeira: <input type="text" name="fname" size="30"> </input></p></td>
-										<td><p>Apelido:<br/> <input type="text" name="fname" size="30"> </input></p></td>
-										<td><p>Número da Bomba:<br/> <input type="text" name="fname" size="30"> </input></p></td>
+										<td><p>Bandeira: <input type="text" id="bandeiraposoto" name="fname" size="30"> </input></p></td>
+										<td><p>Apelido:<br/> <input type="text" id="apelidoposto" name="fname" size="30"> </input></p></td>
+										<td><p>Número da Bomba:<br/> <input type="text" id="numerobomba" name="fname" size="30"> </input></p></td>
 									</tr>
 							</table>
 	   					</div>
@@ -69,13 +69,13 @@
 							<table>
 								<tl>
 									<tr>
-										<td><p>Kilometragem: <input type="text" name="fname" size="30"> </input></p></td>
+										<td><p>Kilometragem: <input type="text" id="quilometragem" name="fname" size="30"> </input></p></td>
 									</tr>
 								</table>
 	   						</div>
 						</div>
 
-						<input type="button" name="Salvar" value="Salvar">
+						<input type="button" onClick="addAbastecimento()" name="Salvar" value="Salvar">
 
 					<br>
 					
