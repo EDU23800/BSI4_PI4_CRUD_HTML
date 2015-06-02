@@ -46,8 +46,7 @@ db.transaction(function(transaction){
 	"ds_apelidoposto TEXT NOT NULL"+
 	"id_usuario INTEGER UNSIGNED NOT NULL "+
 	"CONSTRAINT tb_usuario FOREIGN KEY(id_usuario) REFERENCES id_usuario"+
-	"id_abastecimento INTEGER NOT NULL"+"
-	CONSTRAINT tb_abastecimento FOREIGN KEY(id_abastecimento) REFERENCES id_abastecimento "+");"); 
+	"CONSTRAINT tb_abastecimento FOREIGN KEY(id_abastecimento) REFERENCES id_abastecimento "+");"); 
 
 });
 
