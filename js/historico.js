@@ -1,22 +1,58 @@
-var mydb = AbrirDB();
+//select básico
+function carregarAbastecimentos( restultado, ID_ABASTECIMENTO, callback ){
 
-function CarregarDadosPerfil( itemUsuario ){
+    restultado = null;
+    var d = new Date();
+    var second = d.getSeconds();
+
+
+    CreateTable_Abastecimento();
+
+//    if(ID_ABASTECIMENTO != undefined && ID_ABASTECIMENTO != null && ID_ABASTECIMENTO > 0 )
+//        cQuery = "SELECT USU.ABASTECIMENTO,USU.DS_EMAIL,USU.DS_LOGIN,USU.DS_NOME,USU.DS_SOBRENOME,USU.DS_SENHA,USU.DS_TELEFONE,    USU.DS_CELULAR,"+
+//                 "VEI.DS_MARCA,VEI.DS_COR,VEI.NR_ANOMODELO,VEI.NR_ANOFABRICACAO,VEI.NR_POTENCIA,VEI.QT_TAMANHOTANQUE "+
+ //                "FROM TS_ABASTECIMENTO AS ABAS "+;
+
+        //cQuery = "select abas."         
+
+//    else
+        cQuery = "select * from TS_ABASTECIMENTO ORDER BY ID_ABASTECIMENTO";
+
+    mydb.transaction( function(tx) {
+
+        tx.executeSql(
+            cQuery, 
+            [],
+            function (tx, results) {
+              var len = results.rows.length, i;
+
+              for (i = 0; i < len; i++) {
+                item= results.rows.item(i);
+
+                resultado.push(item);
+                
+                if( typeof callback == "function" ){
+                    callback(item);
+                }
+              }
+            },
+          function(){
+            console.log( "Erro de sintax ao carregar os dados do histórico.");
+          });
+    });
+    
+}
+
+
+
+
+function CarregarDadosHistorico( itemAbastecimento ){
 
 	// Dados pessoais
-	document.getElementById("nome").value = tratarTipoRetorno(itemUsuario.DS_NOME,"C" );
-	document.getElementById("sobrenome").value = tratarTipoRetorno(itemUsuario.DS_SOBRENOME,"C" );
-	document.getElementById("email").value = tratarTipoRetorno(itemUsuario.DS_EMAIL,"C" );
-	document.getElementById("telefone").value = tratarTipoRetorno(itemUsuario.DS_TELEFONE,"C" );
-	document.getElementById("celular").value = tratarTipoRetorno(itemUsuario.DS_CELULAR,"C" );
-	document.getElementById("login").value = tratarTipoRetorno(itemUsuario.DS_LOGIN,"C" );
-	document.getElementById("nascimento").value = tratarTipoRetorno(itemUsuario.DT_NASCIMENTO,"C" );
-	
-	// Dados do veículo
-	document.getElementById("marca").value = tratarTipoRetorno(itemUsuario.DS_MARCA,"C" );
-	document.getElementById("anomodelo").value = tratarTipoRetorno(itemUsuario.NR_ANOMODELO,"C" );
-	document.getElementById("anofabricacao").value = tratarTipoRetorno(itemUsuario.NR_ANOFABRICACAO,"C" );
-	document.getElementById("tamanhotanque").value = tratarTipoRetorno(itemUsuario.QT_TAMANHOTANQUE,"N" );
-	document.getElementById("potencia").value = tratarTipoRetorno(itemUsuario.NR_POTENCIA,"C" );
-	document.getElementById("cor").value = tratarTipoRetorno(itemUsuario.DS_COR,"C" );
-
+	document.getElementById("vl-_por_litro").value = tratarTipoRetorno(itemAbastecimento.vl-_por_litro,"N" );
+	document.getElementById("qt_litro").value = tratarTipoRetorno(itemAbastecimento.qt_litro,"N" );
+	document.getElementById("qt_quilometragem").value = tratarTipoRetorno(itemAbastecimento.qt_quilometragem,"N" );
+	document.getElementById("ds_bandeiraposto").value = tratarTipoRetorno(itemAbastecimento.ds_bandeiraposto,"C" );
+	document.getElementById("ds_apelidoposto").value = tratarTipoRetorno(itemAbastecimento.ds_apelidoposto,"C" );
+	document.getElementById("ds_numerobomba").value = tratarTipoRetorno(itemAbastecimento.ds_numerobomba,"C" );
 }
